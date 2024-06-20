@@ -14,5 +14,14 @@ for (list of lists) {
             right.appendChild(selected);
             selected = null;
         });
+
+        left.addEventListener("dragover", function(e){
+            e.preventDefault();
+        });
+
+        left.addEventListener("drop", function(e){
+            left.appendChild(selected);
+            selected = null;
+        });
     });
 }
